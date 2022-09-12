@@ -25,7 +25,6 @@ const progressionRound = () => {
   return [question, correctAnswer];
 };
 
-const progressionGame = () =>
-  runGame(phrases.DESCRIPTON_PROGRESSION_GAME, progressionRound);
+const progressionGame = () => runGame(phrases.DESCRIPTON_PROGRESSION_GAME, progressionRound);
 
 export default progressionGame;
