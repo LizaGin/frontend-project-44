@@ -11,9 +11,8 @@ const phrases = {
   WELCOME: 'Welcome to the Brain Games!',
   YES: 'yes',
   CONGRATULATION: (name) => `Congratulations, ${name}!`,
-  INCORRECT_ANSWER: (answer, correctAnswer) => `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\n`,
+  INCORRECT_ANSWER: (answer, correctAnswer, name) => `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
   HELLO: (name) => `Hello, ${name}!`,
-  TRY_AGAIN: (name) => `Let's try again, ${name}!`,
   QUESTION: (question) => `Question: ${question}`,
 };
 

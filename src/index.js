@@ -13,8 +13,7 @@ const runGame = (description, getRound) => {
     if (answer === correctAnswer) {
       print(phrases.CORRECT_ANSWER);
     } else {
-      print(phrases.INCORRECT_ANSWER(answer, correctAnswer));
-      print(phrases.TRY_AGAIN(name));
+      print(phrases.INCORRECT_ANSWER(answer, correctAnswer, name));
       return;
     }
   }

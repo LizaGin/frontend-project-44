@@ -13,7 +13,7 @@ const isPrime = (num) => {
 };
 
 const primeRound = () => {
-  const question = getRandomNum(1, 3);
+  const question = getRandomNum(1, 20);
   const correctAnswer = isPrime(question) ? phrases.YES : phrases.NO;
 
   return [question, correctAnswer];
