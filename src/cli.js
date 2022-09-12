@@ -1,12 +1,14 @@
-import readlineSync from "readline-sync";
-import { phrases } from "./phrases.js";
-import { print } from "./helpers.js";
+import readlineSync from 'readline-sync';
+import { print } from './helpers.js';
+import phrases from './phrases.js';
 
-export const getName = () => {
-  print(phrases.WELCOME_PHRASE);
-  const name = readlineSync.question(phrases.ASK_NAME_PHRASE);
+const getName = () => {
+  print(phrases.WELCOME);
+  const name = readlineSync.question(phrases.ASK_NAME);
 
-  print(`${phrases.HELLO_PHRASE}${name}`);
+  print(phrases.HELLO(name));
 
   return name;
 };
+
+export default getName;
