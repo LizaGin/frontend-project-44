@@ -1,5 +1,5 @@
-import phrases from '../phrases.js';
-import { getRandomNum } from '../helpers.js';
+import { phrases } from '../phrases.js';
+import getRandomNum from '../helpers.js';
 import runGame from '../index.js';
 
 const findGCD = (num1, num2) => (!num2 ? num1 : findGCD(num2, num1 % num2));

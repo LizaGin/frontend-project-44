@@ -1,22 +1,28 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
-import { print } from './helpers.js';
-import phrases from './phrases.js';
+import {
+  phrases,
+  printCongratulation,
+  printGreeting,
+  printQuestion,
+  printWrongAnswer,
+} from './phrases.js';
 
 const runGame = (description, getRound) => {
-  const name = getName();
-  print(description);
+  console.log(phrases.WELCOME);
+  const name = readlineSync.question(phrases.ASK_NAME);
+  console.log(printGreeting(name));
+  console.log(description);
   for (let i = 1; i <= 3; i += 1) {
     const [question, correctAnswer] = getRound();
-    print(phrases.QUESTION(question));
+    console.log(printQuestion(question));
     const answer = readlineSync.question(phrases.ANSWER);
     if (answer === correctAnswer) {
-      print(phrases.CORRECT_ANSWER);
+      console.log(phrases.CORRECT_ANSWER);
     } else {
-      print(phrases.INCORRECT_ANSWER(answer, correctAnswer, name));
+      console.log(printWrongAnswer(answer, correctAnswer, name));
       return;
     }
   }
-  print(phrases.CONGRATULATION(name));
+  console.log(printCongratulation(name));
 };
 export default runGame;

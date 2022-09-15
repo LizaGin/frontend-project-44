@@ -1,4 +1,4 @@
-const phrases = {
+export const phrases = {
   ANSWER: 'Your answer: ',
   ASK_NAME: 'May I have your name?',
   CORRECT_ANSWER: 'Correct!',
@@ -10,10 +10,9 @@ const phrases = {
   NO: 'no',
   WELCOME: 'Welcome to the Brain Games!',
   YES: 'yes',
-  CONGRATULATION: (name) => `Congratulations, ${name}!`,
-  INCORRECT_ANSWER: (answer, correctAnswer, name) => `"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${name}!`,
-  HELLO: (name) => `Hello, ${name}!`,
-  QUESTION: (question) => `Question: ${question}`,
 };
 
-export default phrases;
+export const printCongratulation = (name) => `Congratulations, ${name}!`;
+export const printWrongAnswer = (answer, correctAnswer, name) => `"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${name}!`;
+export const printGreeting = (name) => `Hello, ${name}!`;
+export const printQuestion = (question) => `Question: ${question}`;

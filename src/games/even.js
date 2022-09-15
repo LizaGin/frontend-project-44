@@ -1,6 +1,6 @@
-import phrases from '../phrases.js';
-import { getRandomNum } from '../helpers.js';
+import getRandomNum from '../helpers.js';
 import runGame from '../index.js';
+import { phrases } from '../phrases.js';
 
 const isEven = (num) => num % 2 === 0;
 
